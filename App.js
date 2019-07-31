@@ -24,8 +24,8 @@ export default class App extends React.Component {
             const granted = await PermissionsAndroid.request(
                 PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
                 {
-                'title': 'Cool Photo App Camera Permission',
-                'message': 'Cool Photo App needs access to your camera so you can take awesome pictures.'
+                'title': 'Get Gallerry Image App Permission',
+                'message': 'Get Gallerry Image App needs access to your camera so you can take awesome pictures.'
                 }
             )
             if (granted === PermissionsAndroid.RESULTS.GRANTED) {
@@ -43,7 +43,7 @@ export default class App extends React.Component {
                     this.setState({ imageUris: imageUris })
                 })
             } else {
-                console.log("Camera permission denied")
+                console.log("Read external storage permission denied")
             }
             } catch (err) {
             console.warn(err)
